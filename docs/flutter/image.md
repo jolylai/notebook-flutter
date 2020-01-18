@@ -30,9 +30,32 @@ new ListView(
 )
 ```
 
-## 参数
+## 图片展示形式
 
-### fit
+1、Fill the target box by distorting the source's aspect ratio.（通过缩放图片的比率充满目标容器）
+
+```dart {3}
+Image.network(
+  'https://flutter.io/images/homepage/header-illustration.png',
+  fit: BoxFit.fill
+)
+```
+
+![](https://flutter.github.io/assets-for-api-docs/assets/painting/box_fit_fill.png)
+
+2、As large as possible while still containing the source entirely within the
+target box.
+
+```dart {3}
+Image.network(
+  'https://flutter.io/images/homepage/header-illustration.png',
+  fit: BoxFit.contain
+)
+```
+
+![](https://flutter.github.io/assets-for-api-docs/assets/painting/box_fit_contain.png)
+
+3、As small as possible while still covering the entire target box.
 
 ```dart {3}
 Image.network(
@@ -41,58 +64,59 @@ Image.network(
 )
 ```
 
-**BoxFit.fill**
-
-![](https://flutter.github.io/assets-for-api-docs/assets/painting/box_fit_fill.png)
-
-Fill the target box by distorting the source's aspect ratio.
-
-通过缩放图片的比率充满目标容器
-
-**BoxFit.contain**
-
-As large as possible while still containing the source entirely within the
-target box.
-
-![](https://flutter.github.io/assets-for-api-docs/assets/painting/box_fit_contain.png)
-
-**BoxFit.cover**
-
-As small as possible while still covering the entire target box.
-
 ![](https://flutter.github.io/assets-for-api-docs/assets/painting/box_fit_cover.png)
 
-**BoxFit.fitWidth**
-
-Make sure the full width of the source is shown, regardless of
+4、Make sure the full width of the source is shown, regardless of
 whether this means the source overflows the target box vertically.
+
+```dart {3}
+Image.network(
+  'https://flutter.io/images/homepage/header-illustration.png',
+  fit: BoxFit.fitWidth
+)
+```
 
 ![](https://flutter.github.io/assets-for-api-docs/assets/painting/box_fit_fitWidth.png)
 
-**BoxFit.fitHeight**
-
-Make sure the full height of the source is shown, regardless of
+5、Make sure the full height of the source is shown, regardless of
 whether this means the source overflows the target box horizontally.
+
+```dart {3}
+Image.network(
+  'https://flutter.io/images/homepage/header-illustration.png',
+  fit: BoxFit.fitHeight
+)
+```
 
 ![](https://flutter.github.io/assets-for-api-docs/assets/painting/box_fit_fitHeight.png)
 
-**BoxFit.none**
-
-Align the source within the target box (by default, centering) and discard
+6、Align the source within the target box (by default, centering) and discard
 any portions of the source that lie outside the box.
 
 The source image is not resized.
 
+```dart {3}
+Image.network(
+  'https://flutter.io/images/homepage/header-illustration.png',
+  fit: BoxFit.none
+)
+```
+
 ![](https://flutter.github.io/assets-for-api-docs/assets/painting/box_fit_none.png)
 
-**BoxFit.scaleDown**
-
-Align the source within the target box (by default, centering) and, if
+7、Align the source within the target box (by default, centering) and, if
 necessary, scale the source down to ensure that the source fits within the
 box.
 
 This is the same as `contain` if that would shrink the image, otherwise it
 is the same as `none`.
+
+```dart {3}
+Image.network(
+  'https://flutter.io/images/homepage/header-illustration.png',
+  fit: BoxFit.scaleDown
+)
+```
 
 ![](https://flutter.github.io/assets-for-api-docs/assets/painting/box_fit_scaleDown.png)
 

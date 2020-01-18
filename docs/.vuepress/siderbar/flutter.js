@@ -2,11 +2,16 @@ module.exports = [
   {
     title: "组件",
     collapsable: false,
-    children: ["image"]
+    children: ["", "image", "listview"]
   },
   {
-    title: "布局",
+    title: "容器",
     collapsable: false,
-    children: [""]
+    children: ["padding", "size", "decoration", "transform"]
   }
+  // {
+  //   title: "布局",
+  //   collapsable: false,
+  //   children: []
+  // }
 ];
