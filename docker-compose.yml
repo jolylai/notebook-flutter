@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  notebook-flutter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jolylai/notebook-flutter:latest
+    ports:
+      - "8003:8003"

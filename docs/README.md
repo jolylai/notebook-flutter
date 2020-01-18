@@ -5,7 +5,7 @@ actionText: 快速上手 →
 actionLink: /flutter/
 features:
   - title: Widget
-    details: Widget 组件学习
+    details: 组件学习
   - title: Travis-CI
     details: 开源持续集成构建项目
   - title: GitHub
