@@ -1,3 +1,3 @@
 # Notebook Flutter
 
-![](https://img.shields.io/travis/jolylai/notebook-flutter)
+[![](https://img.shields.io/travis/jolylai/notebook-flutter)]
