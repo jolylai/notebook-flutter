@@ -29,5 +29,5 @@ deploy:
 after_deploy:
   - chmod 600 ~/.ssh/id_rsa
   - scp -o "StrictHostKeyChecking no" -i id_rsa docker-compose.yml root@$HOST:/root
-  - ssh -o "StrictHostKeyChecking no" -i id_rsa root@$HOST "cd /root/;sudo docker-compose -f docker-compose.yml pull;sudo docker-compose -f docker-compose.yml up -d;exit"
-  - ssh -o "StrictHostKeyChecking no" -i id_rsa root@$HOST "rm -rf /root/docker-compose.yml"
+  - ssh -o "StrictHostKeyChecking no" -i id_rsa root@$HOST "cd /root;sudo docker-compose -f docker-compose.yml pull;sudo docker-compose -f docker-compose.yml up -d;exit"
+  # - ssh -o "StrictHostKeyChecking no" -i id_rsa root@$HOST "rm -rf /root/docker-compose.yml"
